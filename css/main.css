@@ -1,0 +1,92 @@
+* { 
+  border: 0; 
+  padding: 0; 
+  margin: 0; 
+  box-sizing: border-box; 
+}
+
+body {
+  color: white;
+  font-size: 100%;
+  font-family: arial, helvetica, sans-serif;
+}
+.button {
+  display:inline;
+  position:absolute;
+  right:50px;
+  top:6px;
+  z-index:999;
+  font-size:30px;
+}
+h4 { 
+  padding: 0.5em; 
+  font-size: 2em; 
+  margin-top: 1em; 
+}
+
+.site-header {
+  background-color: pink;
+  color: white;
+  padding: 2em;
+}
+
+.breadcrumb {
+  padding: 10px 12px;
+  color: white;
+  background-color: #333;
+  border-radius: 8px;
+}
+
+.main-content {
+  background-color: orange;
+  color: white;
+  padding: 2em;
+}
+
+.sidebar {
+  background-color: blue;
+  color: white;
+  padding: 2em;
+}
+
+footer {
+  background-color: green;
+  color: white;
+  padding: 2em;
+}
+
+/* breakpoint 1 -> this is tablet @ portrait 768px */
+@media screen and (min-width: 48em) {
+  .grid-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 2fr 1fr;
+
+    grid-gap: 1.5em;
+
+    grid-template-areas:
+      "top top"
+      "body secondary"
+      "bottom bottom"
+  }
+
+  .site-header { grid-area: top; }
+
+  .main-content { grid-area: body; }
+
+  .sidebar { grid-area: secondary; }
+
+  .footer { grid-area: bottom; }
+}
+
+@media screen and (min-width: 64em) {
+  .grid-container {
+      grid-template-columns: 1fr 1fr 1fr;
+
+      grid-template-areas:
+        "top top top"
+        "body body secondary"
+        "bottom bottom bottom"
+  }
+}
