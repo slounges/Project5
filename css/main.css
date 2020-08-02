@@ -24,7 +24,7 @@ h4 {
   margin-top: 1em; 
 }
 
-.site-header {
+.header-area {
   background-color: pink;
   color: white;
   padding: 2em;
@@ -71,7 +71,7 @@ footer {
       "bottom bottom"
   }
 
-  .site-header { grid-area: top; }
+  .header-area { grid-area: top; }
 
   .main-content { grid-area: body; }
 
