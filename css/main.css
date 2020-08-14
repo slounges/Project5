@@ -24,8 +24,14 @@ h4 {
   margin-top: 1em; 
 }
 
-.header-area {
+.logo-area {
   background-color: pink;
+  color: white;
+  padding: 2em;
+}
+
+.nav-area {
+  background-color: lightblue;
   color: white;
   padding: 2em;
 }
@@ -43,7 +49,13 @@ h4 {
   padding: 2em;
 }
 
-.sidebar {
+.more-content {
+  background-color: lightgrey;
+  color: white;
+  padding: 2em;
+}
+
+.side-content {
   background-color: blue;
   color: white;
   padding: 2em;
@@ -66,16 +78,17 @@ footer {
     grid-gap: 1.5em;
 
     grid-template-areas:
-      "top top"
-      "body secondary"
-      "bottom bottom"
+      "top side"
+      "body more "
+      "secondary bottom"
+      
   }
 
-  .header-area { grid-area: top; }
-
+  .logo-area { grid-area: top; }
+  .nav-area { grid-area: side; }
   .main-content { grid-area: body; }
-
-  .sidebar { grid-area: secondary; }
+ .more-content { grid-area: more; }
+  .side-content { grid-area: secondary; }
 
   .footer { grid-area: bottom; }
 }
@@ -85,8 +98,8 @@ footer {
       grid-template-columns: 1fr 1fr 1fr;
 
       grid-template-areas:
-        "top top top"
-        "body body secondary"
+        "top side side"
+        "body more secondary"
         "bottom bottom bottom"
   }
 }
